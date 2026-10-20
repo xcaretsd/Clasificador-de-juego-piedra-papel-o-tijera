@@ -1,0 +1,123 @@
+/* --- 1. Reset básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 2. Estilos generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(-45deg, #fbfbfb, #eed6f9, #c3f2f3);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- 3. Encabezado --- */
+header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #212020;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.instrucciones {
+    font-size: 1rem;
+    color: #3e3e3e; /* Un gris más suave */
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-style: italic; /* Mantiene la cursiva */
+    /* Quitamos los fondos, bordes y paddings para que no parezca botón */
+}
+
+/* --- 4. La Tarjeta de la Cámara --- */
+.tarjeta-camara {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/* --- 5. Estilos para los elementos que inyecta Teachable Machine --- */
+/* El botón de Start */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2980b9; /* Color más oscuro al pasar el mouse */
+}
+
+/* El contenedor del video/cámara */
+#webcam-container {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Para que el video respete las esquinas redondeadas */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#webcam-container canvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Los resultados de las predicciones (las barras de texto) */
+#label-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#label-container div {
+    background-color: #f8f9fa;
+    border: 2px solid #e9ecef;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+/* --- 6. Pie de página --- */
+footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #586364;
+    padding-bottom: 20px;
+}
