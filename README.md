@@ -31,4 +31,4 @@ Puedes probar el modelo funcionando directamente en tu navegador aquí:
 
 ## Autora
 **Xcaret Sanchez Delgado**
-Estudiante de Ingeniería en Inteligencia Artificial
+Estudiante de Ingeniería en Inteligencia Artificial | ESCOM | IPN
